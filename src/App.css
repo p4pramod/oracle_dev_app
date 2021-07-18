@@ -36,21 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.task-mgmt {
-  margin-top: 20px
-}
-
-.task-mgmt .top-10px-spacer{
-  margin-top: 10px
-}
-
-.task-mgmt .bottom-10px-spacer{
-  margin-top: 10px
-}
-
-
-.task-mgmt .checkbox-margin{
-  margin-top: 15px
-
-}
