@@ -120,12 +120,16 @@ function TaskMgmt(props) {
                                     <Form>
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
                                             <Form.Label>Description</Form.Label>
-                                            <Form.Control type="text" placeholder="Description" value={taskDesc} onChange={(event) => setTaskDesc(event.target.value)} />
+                                            <Form.Control type="text" id={`des_txtbox`}
+                                                placeholder="Description" value={taskDesc}
+                                                onChange={(event) => setTaskDesc(event.target.value)} />
                                         </Form.Group>
 
                                         <Form.Group className="mb-3" controlId="formBasicPassword">
                                             <Form.Label>Date</Form.Label>
-                                            <Form.Control type="text" placeholder="Date" value={taskDate} onChange={(event) => setTaskDate(event.target.value)} />
+                                            <Form.Control type="text" id={`complition_dt_txtbox`}
+                                                placeholder="Date" value={taskDate}
+                                                onChange={(event) => setTaskDate(event.target.value)} />
                                         </Form.Group>
                                         <Button variant="primary" onClick={addTask} >
                                             Save
@@ -163,7 +167,7 @@ function TaskMgmt(props) {
                                                     <Col></Col>
                                                     <Col md="1">
                                                         <Form.Check className="checkbox-margin" type="checkbox" checked={task[key].isDone}
-                                                            id={key}
+                                                            id={`${key}_completion_chkbox`}
                                                             onChange={(event) => updateTask(event, key)} />
                                                     </Col>
                                                 </Row>

@@ -65,9 +65,26 @@ describe('Test Task Management Component', () => {
 
     });
 
+    it("Test new Task addition", () => {
+
+        const taskDescriptionTxtBox = container.querySelector('des_txtbox');
+        const taskDateTxtBox = container.querySelector('complition_dt_txtbox');
+
+        act(() => {
+            taskDescriptionTxtBox.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        });
+
+        act(() => {
+            taskDateTxtBox.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        });
+
+
+        expect(container.textContent).not.toContain("React");
+    });
+
     it("Test on Task completion task gets hidden", () => {
 
-        const checkBox = container.querySelector('#asdfaksdfhkerwer1');
+        const checkBox = container.querySelector('#asdfaksdfhkerwer1_completion_chkbox');
 
         act(() => {
             checkBox.dispatchEvent(new MouseEvent('click', { bubbles: true }));
@@ -75,5 +92,4 @@ describe('Test Task Management Component', () => {
 
         expect(container.textContent).not.toContain("React");
     });
-
 })
